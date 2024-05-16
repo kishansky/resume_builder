@@ -43,6 +43,31 @@ $html = ' <div class="card " aria-hidden="true">
             <label class="form-label " for="professional_details">About Work</label>
             <textarea class="form-control  "name="professional_details"></textarea>
         </div>
+        <div class="card-title">
+            <label class="form-label " for="eduction1">Eduction detail-1</label>
+            <textarea class="form-control  "name="eduction1"></textarea>
+        </div>
+        <div class="card-title">
+            <label class="form-label " for="eduction2">Eduction detail-2</label>
+            <textarea class="form-control  "name="eduction2"></textarea>
+        </div>
+        <div class="card-title">
+            <label class="form-label " for="eduction3">Eduction detail-3</label>
+            <textarea class="form-control  "name="eduction3"></textarea>
+        </div>
+        <div class="card-title">
+            <label class="form-label " for="language">Language</label>
+            <textarea class="form-control  "name="language"></textarea>
+        </div>
+        <div class="card-title">
+            <label class="form-label " for="skills">Skills</label>
+            <textarea class="form-control  "name="skills"></textarea>
+        </div>
+        <div class="card-title">
+            <label class="form-label " for="others">Others</label>
+            <textarea class="form-control  "name="others"></textarea>
+        </div>
+
     </div>
     <div class="card-footer ">
         <button class="btn btn-info text-light " style="width:100%;" type="submit" name="create">Create</button>
