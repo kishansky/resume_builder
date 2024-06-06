@@ -120,16 +120,30 @@ if (isset($_GET['id'])) {
     </div>
     <script src="./js/jquery.js"></script>
     <script>
+        let id = '3';
+        console.log(id);
+        <?php
+            if(isset($_GET['id'])){
+                ?>
+                id= '<?php
+                 echo $_GET['id'];
+                 ?>';
+                <?php
+
+            }
+        ?>
         function saveImage() {
             let photo = document.getElementById('photo').files[0];
-            console.log(photo);
+            // console.log(photo);
 
         }
         // let load_flag = 0;
-        function loadMore(start) {
+        function loadMore() {
+            console.log('ggnt');
             $.ajax({
                 url: 'load/load-resume-form.php',
                 // data: 'start=' + start,
+                data: {id:id},
                 type: 'POST',
                 success: function(result) {
                     jQuery('#resume-form').html(result);

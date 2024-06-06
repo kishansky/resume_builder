@@ -1,5 +1,9 @@
 <?php
 session_start();
+// include ('config.php');
+if(isset($_POST['id'])){
+    $id = $_POST['id'];
+}
 if(isset($_SESSION['photo'])){
     $photo = $_SESSION['photo'];
     $name = "Change";
@@ -8,9 +12,9 @@ if(isset($_SESSION['photo'])){
     $name = "Upload";
 }
 $html = ' <div class="card " aria-hidden="true">
-<form action="print-resume.php" method="POST" enctype="multipart/form-data" autocomplete="off">
+<form action="print-resume'.$id.'.php" method="POST" enctype="multipart/form-data" autocomplete="off">
     <div class="card-header text-center text-info" style="font-size: larger;font-weight: bold;">
-        Resume Form
+        Resume Form-'.$id.'
     </div>
     <div class="card-body ">
         <div class="card-title h-100 d-flex flex-column  align-items-center justify-content-center">
@@ -62,6 +66,14 @@ $html = ' <div class="card " aria-hidden="true">
         <div class="card-title">
             <label class="form-label " for="skills">Skills</label>
             <textarea class="form-control  "name="skills"></textarea>
+        </div>
+        <div class="card-title">
+            <label class="form-label " for="projects">Projects</label>
+            <textarea class="form-control  "name="projects"></textarea>
+        </div>
+        <div class="card-title">
+            <label class="form-label " for="career">Career Objective</label>
+            <textarea class="form-control  "name="career"></textarea>
         </div>
         <div class="card-title">
             <label class="form-label " for="others">Others</label>

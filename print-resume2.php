@@ -46,7 +46,15 @@ if (isset($_SESSION['photo'])) {
     <div id="printarea" style="width: 210mm; height: 276mm;">
         <div id="header" class="mx-5 my-4 ">
             <div class="row my-4">
-            <?php
+
+                <div class="col-8">
+                    <h3 class="text-info fw-bold "><?php echo ucwords($_POST['name']); ?></h3>
+                    <p class="p-0 m-0 fs-5"><span class="material-icons md-18">email</span> <?php echo $_POST['email']; ?></p>
+                    <p class="p-0 m-0 fs-5"><span class="material-icons md-18">call</span> <?php echo $_POST['phone']; ?></p>
+                    <p class="p-0 m-0 fs-5"><span class="material-icons md-18">home</span> <?php echo ucfirst($_POST['address']); ?></p>
+                    <p class="p-0 m-0 fs-5"><span class="material-icons md-18">event</span> <?php echo $_POST['dob']; ?></p>
+                </div>
+                <?php
                 if ($photo !== "default.jpg") {
                 ?>
 
@@ -57,20 +65,18 @@ if (isset($_SESSION['photo'])) {
                 <?php
                 }
                 ?>
-                <div class="col-8">
-                    <h3 class="text-info fw-bold "><?php echo ucwords($_POST['name']); ?></h3>
-                    <p class="p-0 m-0 fs-5"><span class="material-icons md-18">email</span> <?php echo $_POST['email']; ?></p>
-                    <p class="p-0 m-0 fs-5"><span class="material-icons md-18">call</span> <?php echo $_POST['phone']; ?></p>
-                    <p class="p-0 m-0 fs-5"><span class="material-icons md-18">home</span> <?php echo ucfirst($_POST['address']); ?></p>
-                    <p class="p-0 m-0 fs-5"><span class="material-icons md-18">event</span> <?php echo $_POST['dob']; ?></p>
-                </div>
-                
 
             </div>
             <hr class="border-info  p-0 m-1" />
             <div class="row">
                 <div class="col-12 ">
                     <h4 class="text-info fw-bold p-0 m-0 text-center "><span class="material-icons md-18">work</span> Professional Experience</h4>
+                </div>
+            </div>
+            <hr class="border-info p-0 m-1" />
+            <div class="row my-4">
+                <div class="col-12 ">
+                    <p class="p-0 m-0 fs-5"><?php echo $_POST['professional_details']; ?></p>
                 </div>
             </div>
             <hr class="border-info  p-0 m-1" />
@@ -86,38 +92,6 @@ if (isset($_SESSION['photo'])) {
                     <li><?php echo $_POST['eduction2']; ?></li>
                     <li><?php echo $_POST['eduction3']; ?></li>
                 </ul>
-            </div>
-            <hr class="border-info p-0 m-1" />
-            <div class="row my-4">
-                <div class="col-12 ">
-                    <p class="p-0 m-0 fs-5"><?php echo $_POST['professional_details']; ?></p>
-                </div>
-            </div>
-            
-            
-            <hr class="border-info  p-0 m-1" />
-            <div class="row">
-                <div class="col-12 ">
-                    <h4 class="text-info fw-bold p-0 m-0 text-center "><span class="material-icons md-18"></span> Projects</h4>
-                </div>
-            </div>
-            <hr class="border-info p-0 m-1" />
-            <div class="row my-4 ">
-                <div class="col-12 ">
-                    <p class="p-0 m-0 fs-5"><?php echo $_POST['projects']; ?></p>
-                </div>
-            </div>
-            <hr class="border-info  p-0 m-1" />
-            <div class="row">
-                <div class="col-12 ">
-                    <h4 class="text-info fw-bold p-0 m-0 text-center "><span class="material-icons md-18"></span> Career Objectives</h4>
-                </div>
-            </div>
-            <hr class="border-info p-0 m-1" />
-            <div class="row my-4 ">
-                <div class="col-12 ">
-                    <p class="p-0 m-0 fs-5"><?php echo $_POST['career']; ?></p>
-                </div>
             </div>
             <div class="row">
                 <div class="col-6 py-1">
@@ -147,6 +121,30 @@ if (isset($_SESSION['photo'])) {
                 <div class="col-6 py-1">
                     <p class="p-0 m-0 fs-5"><?php echo $_POST['skills']; ?></p>
 
+                </div>
+            </div>
+            <hr class="border-info  p-0 m-1" />
+            <div class="row">
+                <div class="col-12 ">
+                    <h4 class="text-info fw-bold p-0 m-0 text-center "><span class="material-icons md-18"></span> Projects</h4>
+                </div>
+            </div>
+            <hr class="border-info p-0 m-1" />
+            <div class="row my-4 ">
+                <div class="col-12 ">
+                    <p class="p-0 m-0 fs-5"><?php echo $_POST['projects']; ?></p>
+                </div>
+            </div>
+            <hr class="border-info  p-0 m-1" />
+            <div class="row">
+                <div class="col-12 ">
+                    <h4 class="text-info fw-bold p-0 m-0 text-center "><span class="material-icons md-18"></span> Career Objectives</h4>
+                </div>
+            </div>
+            <hr class="border-info p-0 m-1" />
+            <div class="row my-4 ">
+                <div class="col-12 ">
+                    <p class="p-0 m-0 fs-5"><?php echo $_POST['career']; ?></p>
                 </div>
             </div>
             <hr class="border-info  p-0 m-1" />
